@@ -14,7 +14,7 @@
 class DcMotor {
     public:
 
-        // Constructor
+        // Constructor. Calling this automatically sets motorDirectionPin1 and motorDirectionPin2's pinMode to OUTPUT.
         DcMotor(uint8_t motorDirectionPin1, uint8_t motorDirectionPin2);
 
         // Move the motor one direction or the other, immediately, at top speed.

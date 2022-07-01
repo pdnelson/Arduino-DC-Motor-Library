@@ -15,9 +15,7 @@ enum LinearActuatorDirection : bool {
 DcMotor linearActuator = DcMotor(MOTOR_DIR_1, MOTOR_DIR_2); 
 
 void setup() {
-  // Both pins must be output, because the DcMotor library writes to them.
-  pinMode(MOTOR_DIR_1, OUTPUT);
-  pinMode(MOTOR_DIR_2, OUTPUT);
+	/* none */
 }
 
 void loop() {

@@ -7,9 +7,13 @@
 
 DcMotor::DcMotor(uint8_t motorDirectionPin1, uint8_t motorDirectionPin2) {
   this->speed = MOTOR_STOP_SPEED;
-  this->motorDirectionPin1 = motorDirectionPin1;
-  this->motorDirectionPin2 = motorDirectionPin2;
   this->delayMicros = 15;
+  
+  this->motorDirectionPin1 = motorDirectionPin1;
+  pinMode(this->motorDirectionPin1, OUTPUT);
+  
+  this->motorDirectionPin2 = motorDirectionPin2;
+  pinMode(this->motorDirectionPin2, OUTPUT);
 }
 
 void DcMotor::immediateStart(bool direction) {
